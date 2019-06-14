@@ -1,0 +1,11 @@
+.error-window-hide {
+    display: none;
+}
+
+.error-window-show {
+    display: contents;
+}
+
+.error-red {
+    border: 1px solid red;
+}
