@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<div id="app">
+<header>
+    <div class="logo">E-shop</div>
+    <div class="cart">
+        <form action="#" method="post" class="search-form">
+            <input type="text" class="search-field" v-model="searchLine" @keyup="filterGoods(searchLine)">
+            <button class="btn-search" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <!--div class="cart-block invisible"></div-->
+
+        <!--
+
+        тут какая-то беда с белым цветом
+        -->
+        <div class="cart-head">
+            <button class="btn-cart" type="button">Корзина</button>
+            <div class="drop-cart" v-show="isVisibleCart">
+                <div class="drop-cart-item" v-for="cartItem of cart" :key="cartItem.id_product">
+                    <img :src="imgCatalogSmall" alt="item1">
+                    <div class="item-about">
+                        <h3 class="item-about-name">{{ cartItem.product_name }}</h3>
+                        <p class="item-about-p">{{ cartItem.quantity }} x {{ cartItem.price }}</p>
+                        <button @click="removeProduct(cartItem)">X</button>
+                    </div>
+                    <div class="cart-item-del"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                </div>
+                <div class="total-sum">
+                    <div>TOTAL</div>
+                    <div>$500.00</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<main>
+    <div class="products">
+
+        <!--
+
+        ВОПРОС:
+
+        непонятно как отображать отфильтрованный массив тут же
+
+        -->
+        <div class="product-item" v-for="product of products" :key="product.id_product">
+            <img :src="imgCatalog" :alt="product.product_name">
+            <div class="desc">
+                <h3>{{product.product_name}}</h3>
+                <p>{{product.price}}</p>
+                <button class="buy-btn" @click="addProduct(product)">Купить</button>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>
+
