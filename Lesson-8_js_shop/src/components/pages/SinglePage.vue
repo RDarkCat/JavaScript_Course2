@@ -6,9 +6,9 @@
             <ul class="arrivals-menu">
                 <li class="arrivals-crumbs"><a href="index.html">HOME</a></li>
                 <li>/</li>
-                <li class="arrivals-crumbs"><a href="catalog.html">MAN</a></li>
+                <li class="arrivals-crumbs"><router-link to="catalog">MAN</router-link></li>
                 <li>/</li>
-                <li class="arrivals-crumbs"><a href="catalog.html">NEW ARRIVALS</a></li>
+                <li class="arrivals-crumbs"><router-link to="catalog">NEW ARRIVALS</router-link></li>
             </ul>
         </div>
     </nav>
@@ -65,16 +65,16 @@
 
 
         </div>
-        <a href="cart.html" class="page-about_button">
+        <router-link to="cart" class="page-about_button">
             <img src="img/cart-pink.svg" alt="cart">
             Add to Cart
-        </a>
+        </router-link>
 
     </div>
     <div class="page_h2">you may like also</div>
     <div class="items">
         <div class="item">
-            <a href="single_page.html">
+            <router-link to="single">
                 <figure>
                     <img src="img/Item17.jpg" alt="Item">
                     <figcaption class="item-text">
@@ -82,11 +82,11 @@
                         <h3>$52.00</h3>
                     </figcaption>
                 </figure>
-            </a>
+            </router-link>
             <a href="cart.html" class="add">Add to Card</a>
         </div>
         <div class="item">
-            <a href="single_page.html">
+            <router-link to="single">
                 <figure>
                     <img src="img/Item18.jpg" alt="Item">
                     <figcaption class="item-text">
@@ -94,11 +94,11 @@
                         <h3>$52.00</h3>
                     </figcaption>
                 </figure>
-            </a>
+            </router-link>
             <a href="cart.html" class="add">Add to Card</a>
         </div>
         <div class="item">
-            <a href="single_page.html">
+            <router-link to="single">
                 <figure>
                     <img src="img/Item19.jpg" alt="Item">
                     <figcaption class="item-text">
@@ -106,7 +106,7 @@
                         <h3>$52.00</h3>
                     </figcaption>
                 </figure>
-            </a>
+            </router-link>
             <a href="cart.html" class="add">Add to Card</a>
         </div>
         <div class="item">

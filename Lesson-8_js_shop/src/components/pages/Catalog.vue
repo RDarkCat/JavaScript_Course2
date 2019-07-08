@@ -4,34 +4,34 @@
         <div class="arrivals-cont">
             <h2 class="arrivals-name">NEW ARRIVALS</h2>
             <ul class="arrivals-menu">
-                <li class="arrivals-crumbs"><a href="index.html">HOME</a></li>
+                <li class="arrivals-crumbs"><router-link to="index">HOME</router-link></li>
                 <li>/</li>
-                <li class="arrivals-crumbs"><a href="catalog.html">MAN</a></li>
+                <li class="arrivals-crumbs"><router-link to="catalog">MAN</router-link></li>
                 <li>/</li>
-                <li class="arrivals-crumbs"><a href="catalog.html">NEW ARRIVALS</a></li>
+                <li class="arrivals-crumbs"><router-link to="catalog">NEW ARRIVALS</router-link></li>
             </ul>
         </div>
     </nav>
     <div class="catalog-cont">
         <div class="panel-filter-side">
-            <a href="catalog.html" class="filter-type">CATEGORY</a>
+            <router-link to="catalog" class="filter-type">CATEGORY</router-link>
             <ul class="filter-list">
-                <li><a href="single_page.html" class="filter-list">Accessories</a></li>
-                <li><a href="single_page.html" class="filter-list">Bags</a></li>
-                <li><a href="single_page.html" class="filter-list">Denim</a></li>
-                <li><a href="single_page.html" class="filter-list">Hoodies & Sweatshirts</a></li>
-                <li><a href="single_page.html" class="filter-list">Jackets & Coats</a></li>
-                <li><a href="single_page.html" class="filter-list">Pants</a></li>
-                <li><a href="single_page.html" class="filter-list">Polos</a></li>
-                <li><a href="single_page.html" class="filter-list">Shirts</a></li>
-                <li><a href="single_page.html" class="filter-list">Shoes</a></li>
-                <li><a href="single_page.html" class="filter-list">Shorts</a></li>
-                <li><a href="single_page.html" class="filter-list">Sweaters & Knits</a></li>
-                <li><a href="single_page.html" class="filter-list">T-Shirts</a></li>
-                <li><a href="single_page.html" class="filter-list">Tanks</a></li>
+                <li><router-link to="single" class="filter-list">Accessories</router-link></li>
+                <li><router-link to="single" class="filter-list">Bags</router-link></li>
+                <li><router-link to="single" class="filter-list">Denim</router-link></li>
+                <li><router-link to="single" class="filter-list">Hoodies & Sweatshirts</router-link></li>
+                <li><router-link to="single" class="filter-list">Jackets & Coats</router-link></li>
+                <li><router-link to="single" class="filter-list">Pants</router-link></li>
+                <li><router-link to="single" class="filter-list">Polos</router-link></li>
+                <li><router-link to="single" class="filter-list">Shirts</router-link></li>
+                <li><router-link to="single" class="filter-list">Shoes</router-link></li>
+                <li><router-link to="single" class="filter-list">Shorts</router-link></li>
+                <li><router-link to="single" class="filter-list">Sweaters & Knits</router-link></li>
+                <li><router-link to="single" class="filter-list">T-Shirts</router-link></li>
+                <li><router-link to="single" class="filter-list">Tanks</router-link></li>
             </ul>
-            <a href="catalog.html" class="filter-type">BRAND</a>
-            <a href="catalog.html" class="filter-type">DESIGNER</a>
+            <router-link to="catalog" class="filter-type">BRAND</router-link>
+            <router-link to="catalog" class="filter-type">DESIGNER</router-link>
         </div>
         <div class="panel-catalog">
             <div class="panel-filter-top">

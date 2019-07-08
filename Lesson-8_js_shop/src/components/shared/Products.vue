@@ -1,6 +1,6 @@
 <template>
     <div class="items">
-        <product
+        <product v-on:addProduct="addProduct(product)"
                 v-for="product of filtered"
                 :key="product.id_product"
                 :product="product"
@@ -26,9 +26,12 @@
       }
     },
     methods: {
-      filter(value){
+      filter(value) {
         let regexp = new RegExp(value, 'i');
         this.filtered = this.products.filter(el => regexp.test(el.product_name));
+      },
+      addProduct(product) {
+        this.$store.dispatch('addProduct', product);
       }
     },
     mounted() {
@@ -43,14 +46,6 @@
           this.filtered.push(el);
         }
       })
-      /*this.$root.$refs.doJson(`${API}/products.json`, 'GET')
-          .then(data => {
-            for (let el of data) {
-              this.products.push(el);
-              this.filtered.push(el);
-            }
-          });
-          */
     }
   }
 </script>

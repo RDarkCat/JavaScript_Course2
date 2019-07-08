@@ -3,25 +3,25 @@
         <div class="container_navigation">
             <ul class="menu">
                 <li class="list-menu">
-                    <a class="link-menu" href="index.html">HOME</a>
+                    <router-link class="link-menu" to="index.html">HOME</router-link>
                 </li>
                 <li class="list-menu">
-                    <a class="link-menu" href="catalog.html">MAN</a>
+                    <router-link to="catalog" class="link-menu">MAN</router-link>
                 </li>
                 <li class="list-menu">
-                    <a class="link-menu" href="catalog.html">WOMAN</a>
+                    <router-link class="link-menu" to="catalog.html">WOMAN</router-link>
                 </li>
                 <li class="list-menu">
-                    <a class="link-menu" href="catalog.html">KIDS</a>
+                    <router-link class="link-menu" to="catalog.html">KIDS</router-link>
                 </li>
                 <li class="list-menu">
-                    <a class="link-menu" href="catalog.html">ACCOSERIESE</a>
+                    <router-link class="link-menu" to="catalog.html">ACCOSERIESE</router-link>
                 </li>
                 <li class="list-menu list-menu6">
-                    <a class="link-menu" href="catalog.html">FEATURED</a>
+                    <router-link class="link-menu" to="catalog.html">FEATURED</router-link>
                 </li>
                 <li class="list-menu list-menu7">
-                    <a class="link-menu" href="catalog.html" >HOT DEALS</a>
+                    <router-link class="link-menu" to="catalog.html" >HOT DEALS</router-link>
                 </li>
             </ul>
         </div>

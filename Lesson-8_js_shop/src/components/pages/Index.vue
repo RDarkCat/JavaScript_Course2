@@ -11,38 +11,38 @@
 
         <div class="categories">
             <div class="container-categories">
-                <a href="catalog.html">
+                <router-link to="catalog">
                     <div class="categ1">
                         <div class="label-categ">
                             <h3>HOT DEAL</h3>
                             <h2>FOR MEN</h2>
                         </div>
                     </div>
-                </a>
-                <a href="catalog.html">
+                </router-link>
+                <router-link to="catalog">
                     <div class="categ2">
                         <div class="label-categ">
                             <h3>LUXIROUS & TRENDY</h3>
                             <h2>ACCESORIES</h2>
                         </div>
                     </div>
-                </a>
-                <a href="catalog.html">
+                </router-link>
+                <router-link to="catalog">
                     <div class="categ3">
                         <div class="label-categ">
                             <h3>30% OFFER</h3>
                             <h2>WOMEN</h2>
                         </div>
                     </div>
-                </a>
-                <a href="catalog.html">
+                </router-link>
+                <router-link to="catalog">
                     <div class="categ4">
                         <div class="label-categ">
                             <h3>NEW ARRIVALS</h3>
                             <h2>FOR KIDS</h2>
                         </div>
                     </div>
-                </a>
+                </router-link>
 
             </div>
         </div>

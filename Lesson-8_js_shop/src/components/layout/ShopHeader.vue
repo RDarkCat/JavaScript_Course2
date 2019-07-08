@@ -25,8 +25,6 @@
     name: 'ShopHeader',
     data(){
       return {
-        cartItems: [],
-        showCart: false,
       }
     },
     components: {
@@ -36,16 +34,6 @@
 
     },
     mounted() {
-      axios(`${API}/userCart.json`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(response => {
-        for (let el of response.data.contents) {
-          this.cartItems.push(el);
-        }
-      })
     }
   }
 </script>

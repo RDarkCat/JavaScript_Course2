@@ -4,11 +4,11 @@
             <div class="arrivals-cont">
                 <h2 class="arrivals-name">NEW ARRIVALS</h2>
                 <ul class="arrivals-menu">
-                    <li class="arrivals-crumbs"><a href="index.html">HOME</a></li>
+                    <li class="arrivals-crumbs"><router-link to="index">HOME</router-link></li>
                     <li>/</li>
-                    <li class="arrivals-crumbs"><a href="catalog.html">MAN</a></li>
+                    <li class="arrivals-crumbs"><router-link to="catalog">MAN</router-link></li>
                     <li>/</li>
-                    <li class="arrivals-crumbs"><a href="catalog.html">NEW ARRIVALS</a></li>
+                    <li class="arrivals-crumbs"><router-link to="catalog">NEW ARRIVALS</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -27,7 +27,7 @@
             </table>
             <div class="cart__block2">
                 <a href="#" class="cart__2_buttons" title="Clear cart">CLEAR SHOPPING CART</a>
-                <a href="catalog.html" class="cart__2_buttons" title="Continue shopping">CONTINUE SHOPPING</a>
+                <router-link to="catalog" class="cart__2_buttons" title="Continue shopping">CONTINUE SHOPPING</router-link>
             </div>
             <div class="cart__block3">
                 <div class="cart__block3_adressBlock">
@@ -93,53 +93,6 @@
         return this.cartItems.reduce((acc, item) => {
           return acc + (item.price * item.quantity);
         }, 0);
-      }
-    },
-    mounted() {
-      axios(`${API}/userCart.json`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(response => {
-        for (let el of response.data.contents) {
-          this.cartItems.push(el);
-        }
-      })
-    },
-    methods: {
-      addProduct(product) {
-        let find = this.cartItems.find(el => el.id_product === product.id_product);
-        if (find) {
-          axios(`${API}/addToBasket.json`, {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            data: {
-              quantity: 1
-            }
-          })
-              .then(response => {
-                if (response.data.result) {
-                  find.quantity++
-                }
-              })
-        } else {
-          let prod = Object.assign({quantity: 1}, product);
-          axios(`${API}/addToBasket.json`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            data: prod
-          })
-              .then(response => {
-                if (response.data.result) {
-                  this.cartItems.push(prod);
-                }
-              })
-        }
       }
     }
   }

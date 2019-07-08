@@ -20,8 +20,8 @@
             <div>TOTAL</div>
             <div>$500.00</div>
         </div>
-        <a href="checkout.html" class="button-checkout">CHECKOUT</a>
-        <a href="cart.html" class="button-checkout">GO TO CART</a>
+        <router-link to="checkout" class="button-checkout">CHECKOUT</router-link>
+        <router-link to="cart" class="button-checkout">GO TO CART</router-link>
     </div>
 </template>
 

@@ -7,14 +7,19 @@
                 <h3>${{product.price}}</h3>
             </div>
         </a>
-        <a href="" class="add" @click="$root.$refs.cart.addProduct(product)">Add to Cart</a>
+        <a href="" class="add" @click.prevent="addProduct(product)">Add to Cart</a>
     </div>
 </template>
 
 <script>
   export default {
     name: 'Product',
-    props: ['product', 'img']
+    props: ['product', 'img'],
+    methods: {
+      addProduct(product) {
+        this.$emit('addProduct', product);
+      }
+    }
   }
 </script>
 

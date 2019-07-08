@@ -72,6 +72,9 @@
       Cart,
       HeaderCart
     },
+    mounted() {
+      this.$store.dispatch('getCart')
+    },
     methods: {
     }
   }
